@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven'  // Use the Maven tool configured in Jenkins
+        maven 'Maven'  // Name must match the Maven installation in Jenkins
     }
 
     stages {
@@ -26,7 +26,7 @@ pipeline {
 
         stage('Run Application') {
             steps {
-                sh 'java -jar target/MyMavenGuavaApp-1.0-SNAPSHOT.jar'
+                sh 'java -jar target/your-project-1.0-SNAPSHOT.jar' // updated JAR name
             }
         }
     }
@@ -40,3 +40,4 @@ pipeline {
         }
     }
 }
+
